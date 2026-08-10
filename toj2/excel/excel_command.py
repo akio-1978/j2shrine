@@ -16,7 +16,7 @@ class ExcelCommand(Command):
         self.parser = argparse.ArgumentParser(prog=f'{toj2.PROG_NAME} excel mode', 
                                               formatter_class=argparse.RawTextHelpFormatter,
                                               usage=toj2.SEE_HELP)
-        self.setup()
+        super().__init__()
 
     def get_loader(self, context):
         """Commandが使うRenderのクラスを返す"""

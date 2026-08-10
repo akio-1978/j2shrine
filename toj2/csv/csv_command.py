@@ -10,7 +10,7 @@ class CsvCommand(Command):
         self.parser = argparse.ArgumentParser(exit_on_error=False, prog=f'{toj2.PROG_NAME} csv mode',
                                               usage=toj2.SEE_HELP
                                               )
-        self.setup()
+        super().__init__()
 
     def get_loader(self, context):
         """Commandが使うRenderのクラスを返す"""

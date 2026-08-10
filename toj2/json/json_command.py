@@ -10,7 +10,7 @@ class JsonCommand(Command):
     def __init__(self):
         self.parser = argparse.ArgumentParser(prog=f'{toj2.PROG_NAME} json mode',
                                               usage=toj2.SEE_HELP)
-        self.setup()
+        super().__init__()
 
     def get_loader(self, context):
         """Commandが使うRenderのクラスを返す"""
